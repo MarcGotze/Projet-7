@@ -1,0 +1,21 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &__txt {
+        position: absolute;
+        color: white;
+        z-index: 1;
+        text-align: center;
+        top: 235px;
+        font-size: 48px;
+        line-height: 68px;
+    }
+
+    &__img {
+        position: relative;
+        border-radius: 25px;
+        width: 100%;
+        filter : brightness(60%)
+    }   
+}
