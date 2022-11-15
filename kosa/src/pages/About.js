@@ -7,9 +7,11 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <div>
-      <Header />
-      <Banner />
-      <Dropdown />
+      <div className="wrapper">
+        <Header />
+        <Banner />
+        <Dropdown />
+      </div>
       <Footer />
     </div>
   );
