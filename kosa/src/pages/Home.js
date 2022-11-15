@@ -7,9 +7,11 @@ import Header from "../components/Header";
 const Home = () => {
   return (
     <div>
-      <Header />
-      <Banner />
-      <Cards />
+      <div className="wrapper">
+        <Header />
+        <Banner />
+        <Cards />
+      </div>
       <Footer />
     </div>
   );

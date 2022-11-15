@@ -3,12 +3,17 @@
     flex-direction: column;
     align-items: center;
     &__404 {
-        height: 150px;
         font-size: 288px;
         font-weight: 700;
+        margin: 0;
     }
     &__txt {
         font-size: 36px;
         line-height: 51px;
+        margin-bottom: 180px;
+    }
+    &__return {
+        font-size: 18px;
+        text-decoration-line: underline;
     }
 }

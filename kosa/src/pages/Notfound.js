@@ -13,7 +13,7 @@ const Notfound = () => {
           Oups! La page que vous demandez n'existe pas.
         </h3>
         <NavLink to="/">
-          <p>Retourner sur la page d'accueil</p>
+          <p className="error__return">Retourner sur la page d'accueil</p>
         </NavLink>
       </div>
       <Footer />
