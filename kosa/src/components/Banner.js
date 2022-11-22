@@ -6,7 +6,7 @@ const Banner = () => {
       <h3 className="banner__txt">Chez vous, partout et ailleurs</h3>
       <img
         className="banner__img"
-        src="./images/BANNER.png"
+        src="./images/HOME_BANNER.png"
         alt="paysage sauvage"
       />
     </div>
