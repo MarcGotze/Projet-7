@@ -27,7 +27,7 @@ const About = () => {
     <div>
       <div className="wrapper">
         <Header />
-        <Banner />
+        <Banner bannerContent={"./images/ABOUT_BANNER.png"} />
         {dropdownContent.map((content) => (
           <Dropdown key={content.title} content={content} />
         ))}

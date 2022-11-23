@@ -1,14 +1,9 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ bannerContent }) => {
   return (
     <div className="banner">
-      <h3 className="banner__txt">Chez vous, partout et ailleurs</h3>
-      <img
-        className="banner__img"
-        src="./images/HOME_BANNER.png"
-        alt="paysage sauvage"
-      />
+      <img className="banner__img" src={bannerContent} alt="paysage sauvage" />
     </div>
   );
 };

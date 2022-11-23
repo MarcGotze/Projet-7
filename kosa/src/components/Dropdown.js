@@ -9,7 +9,7 @@ const Dropdown = ({ content }) => {
         <div className="collapsible__header" {...getToggleProps()}>
           {isExpanded ? content.title : content.title}
           <img
-            className="collapsible__arrow"
+            className={isExpanded ? "collapsible__up" : "collapsible__down"}
             src="./images/ARROW_D.png"
             alt="Flèche"
           />

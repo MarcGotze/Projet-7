@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 const Logement = () => {
   const logementId = useParams();
   const [data, setData] = useState([]);
+  //const [logement, setLogement] = useState([]);
 
   useEffect(() => {
     axios.get("../logements.json").then((res) => setData(res.data));

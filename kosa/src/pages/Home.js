@@ -15,7 +15,10 @@ const Home = () => {
     <div>
       <div className="wrapper">
         <Header />
-        <Banner />
+        <div>
+          <Banner bannerContent={"./images/HOME_BANNER.png"} />
+          <h3 className="banner__txt">Chez vous, partout et ailleurs</h3>
+        </div>
         <section className="card__box">
           {data.map((card) => (
             <Card key={card.id} card={card} />

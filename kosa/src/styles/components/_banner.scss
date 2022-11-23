@@ -3,13 +3,13 @@
     justify-content: center;
     align-content: center;
     &__txt {
-        position: absolute;
+        position: relative;
         color: white;
         z-index: 1;
-        text-align: center;
-        top: 200px;
         font-size: 48px;
         line-height: 68px;
+        bottom: 200px;
+        left: 260px;
     }
 
     &__img {
