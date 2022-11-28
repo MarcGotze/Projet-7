@@ -7,27 +7,30 @@ import Tag from "../components/Tag";
 import Footer from "../components/Footer";
 
 const Logement = () => {
-  const logementId = useParams();
-  const [data, setData] = useState([]);
-  //const [logement, setLogement] = useState([]);
+  const params = useParams();
+  const [logements, setLogements] = useState([]);
+  const [logement, setLogement] = useState({});
 
   useEffect(() => {
-    axios.get("../logements.json").then((res) => setData(res.data));
+    axios.get("../logements.json").then((res) => {
+      setLogements(res.data);
+    });
   }, []);
 
-  const logement = data.find((element) => element.id === logementId.id);
-
-  console.log(data);
-  console.log(logementId);
-  console.log(logement);
+  useEffect(() => {
+    const logement = logements.find((element) => element.id === params.id);
+    if(logement){
+      setLogement(logement);
+    }
+  }, [logements, params.id]);
 
   return (
     <div>
       <div className="wrapper item">
         <Header />
         <Carrousel />
-        <h2 className="item__title">Test test test</h2>
-        <p className="item__city">Test, test</p>
+        <h2 className="item__title">{logement.title}</h2>
+        <p className="item__city">{logement.location}</p>
         <Tag />
       </div>
       <Footer />
