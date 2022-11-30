@@ -22,6 +22,12 @@ body {
     color: $color-1;
     a:link { text-decoration: none; }
     a:visited { text-decoration: none; color: $color-1; }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .wrapper {
