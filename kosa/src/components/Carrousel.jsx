@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Carrousel = ({pictures}) => {
-  const [currentIndex, setCurrentUser] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideStyles = {
     width: "100%",
@@ -11,7 +11,8 @@ const Carrousel = ({pictures}) => {
     backgroundSize: "cover",
     backgroundImage: `url(${pictures[currentIndex]})`,
   };
-
+  console.log(pictures[0]);
+  console.log(pictures[1]);
   return (
     <div className="containerStyles">
       <div style={slideStyles}></div>
