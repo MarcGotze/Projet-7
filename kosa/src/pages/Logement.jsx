@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 const Logement = () => {
   const params = useParams();
-  const [logements, setLogements] = useState([]);
+  const [logements, setLogements] = useState(null);
   const [logement, setLogement] = useState({});
   const [tags, setTags] = useState([]);
   const [id, setId] = useState("");
@@ -18,13 +18,21 @@ const Logement = () => {
   const [pictures, setPictures] = useState([]);
   let navigate = useNavigate();
 
+  //Récupération des données du json via un axios.get
   useEffect(() => {
     axios.get("../logements.json").then((res) => {
       setLogements(res.data);
     });
   }, []);
 
+  //Settings des données dans les states et gestion des erreurs
   useEffect(() => {
+    //Si logements est null, on break
+    if (logements === null){
+      return;
+    }
+
+    //Sinon on continue l'execution du code afin de récupérer les données
     const logement = logements.find((element) => element.id === params.id);
     if(logement){
       setLogement(logement);
@@ -34,16 +42,12 @@ const Logement = () => {
       setHost(logement.host);
       setId(logement.id);
       setPictures(logement.pictures);
+
+    //Si logement n'est pas un truthy, alors nous sommes redirigé vers notfound  
+    } else {
+      navigate("/notfound");
     }
   }, [logements, params.id]);
-
-  console.log(pictures);
-
-  // useEffect (() => {
-  //   if (id != params.id){
-  //     console.log("/notfound");
-  //   }
-  // }, []);
 
   return (
     <div>
