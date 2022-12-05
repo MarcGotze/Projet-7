@@ -20,6 +20,10 @@
     user-select: none;
 }
 
+.hidden-arrow {
+    display: none;
+}
+
 .left-arrow:hover,
 .right-arrow:hover {
     animation-name: arrow-scale;

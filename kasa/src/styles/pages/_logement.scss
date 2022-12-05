@@ -12,11 +12,13 @@
     font-size: 36px;
     font-weight: 500;
     height: 15%;
+    cursor: default;
 }
 
 .item__city {
     color: $color-1;
     position: relative;
+    cursor: default;
 }
 
 .host {
@@ -33,4 +35,17 @@
         margin-right: 10px;
         cursor: default;
     }
+}
+
+.starsContainer {
+    display: flex;
+    width: 250px;
+}
+
+.star {
+    margin: 5px;
+}
+
+.marginTop {
+    margin-top: 10px;
 }

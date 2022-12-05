@@ -30,8 +30,8 @@ const Carrousel = ({pictures}) => {
   return (
     <section className="containerStyles">
       <div className="arrow-box">
-        <BiChevronLeft className="left-arrow" onClick={prevSlide} />
-        <BiChevronRight className="right-arrow" onClick={nextSlide} />
+        <BiChevronLeft className={pictures.length > 1 ? "left-arrow" : "hidden-arrow"} onClick={prevSlide} />
+        <BiChevronRight className={pictures.length > 1 ? "right-arrow" : "hidden-arrow"} onClick={nextSlide} />
       </div>
       <div style={slideStyles}></div>
     </section>
