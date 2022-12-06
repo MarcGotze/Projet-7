@@ -18,7 +18,7 @@ const Dropdown = ({ title, content, array, style }) => {
         </div>
         <div {...getCollapseProps()}>
           <div className={`collapsible__content${style}`}>
-            {/* {title === "Equipements" ? <ul>{array.map(item => (<li key={item}>{item}</li>))}</ul> : <p>{content}</p>} */}
+            {title === "Equipements" ? <ul>{Array.isArray(array) ? array.map(item => (<li key={item}>{item}</li>)) : []}</ul> : <p>{content}</p>}
           </div>
         </div>
       </div>

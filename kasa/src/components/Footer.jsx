@@ -8,7 +8,7 @@ const Footer = () => {
         src="../images/FOOTER_LOGO.png"
         alt="logo kosa"
       />
-      <p className="footer__copyrights">© 2020 Kosa All rights reserved</p>
+      <p className="footer__copyrights">© 2020 Kasa All rights reserved</p>
     </footer>
   );
 };
