@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
-import Carrousel from "../components/Carrousel";
+import Gallery from "../components/Gallery";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Footer from "../components/Footer";
-import Dropdown_small from "../components/Dropdown_small";
+import Dropdown from "../components/Dropdown";
 
 const Logement = () => {
   const params = useParams();
@@ -17,7 +17,8 @@ const Logement = () => {
   const [host, setHost] = useState ({});
   const [pictures, setPictures] = useState([]);
   const [description, setDescription] = useState("");
-  const [equipments, setEquipments] = useState([]);
+  const [equipments, setEquipments] = useState("");
+
   let navigate = useNavigate();
 
   //Récupération des données du json via un axios.get
@@ -39,7 +40,7 @@ const Logement = () => {
     if(logement){
       setLogement(logement);
       setTags(logement.tags);
-      setRating(logement.rating)
+      setRating(parseInt(logement.rating))
       setHost(logement.host);
       setPictures(logement.pictures);
       setDescription(logement.description);
@@ -51,13 +52,12 @@ const Logement = () => {
     }
   }, [logements, params.id]);
 
-  console.log(description);
   return (
     <div>
       <div className="wrapper item">
         <Header />
         <div>
-          <Carrousel pictures={pictures}/>
+          <Gallery pictures={pictures}/>
         </div>
         <div className="logementWrapper">
           <div className="logementTitle">
@@ -78,13 +78,13 @@ const Logement = () => {
             ))}
           </div>
           <div className="starsContainer">
-            <Rating rating={rating} />
+              <Rating rating={rating}/>
           </div>
         </div>
         
-        <div className="logementWrapper marginTop">
-              <Dropdown_small key="Description" content={description} title="Description" />
-              <Dropdown_small key="Equipments" content={equipments} title="Equipements" />
+        <div className="logementWrapper gap">
+              <Dropdown key="Description" title="Description" content={description} style="__small" />
+              <Dropdown key="Equipments" title="Equipements" array={equipments} style="__small" />
         </div>
 
       </div>

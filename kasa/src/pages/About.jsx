@@ -29,7 +29,7 @@ const About = () => {
         <Header />
         <Banner bannerContent={"./images/ABOUT_BANNER.png"} />
         {dropdownContent.map((content) => (
-          <Dropdown key={content.title} content={content} />
+          <Dropdown key={content.title} title={content.title} content={content.text} style={""} />
         ))}
       </div>
       <Footer />

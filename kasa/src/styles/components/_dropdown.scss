@@ -9,12 +9,21 @@
 .collapsible {
     width: 1023px;
     margin: 0 auto;
-
+    &__small {
+        width: 582px;
+        height: 52px;
+    }
     &__content {
         padding: 10px 15px 10px 15px;
         background-color: #F7F7F7;
         border-radius: 5px;
         font-size: 24px;
+        &__small {
+            padding: 10px 15px 10px 15px;
+            background-color: #F7F7F7;
+            border-radius: 5px;
+            font-size: 18px;
+        }
     }
     &__header {
         font-size: 24px;
@@ -23,10 +32,23 @@
         border-radius: 5px;
         padding: 7px 0px 7px 18px;
         cursor: pointer;
+        &__small {
+            height: 52px;
+            font-size: 18px;
+            color: white;
+            background-color: #FF6060;
+            border-radius: 5px;
+            padding: 15px 0px 7px 18px;
+            cursor: pointer;
+        }
     }
     &__down {
         float: right;
         padding: 8px 25px 0px 0px;
+        &__small {
+            float: right;
+            padding: 5px 25px 0px 0px;
+        }
     }
     &__up {
         float: right;
@@ -34,5 +56,16 @@
         transform: rotate(180deg);
         transform-origin: 12px;
         margin-top: 8px;
+        &__small {
+            float: right;
+            padding: 8px 25px 0px 0px;
+            transform: rotate(180deg);
+            transform-origin: 12px;
+            margin-top: 5px;
+        }
     }
+}
+
+.gap {
+    gap: 45px;
 }
