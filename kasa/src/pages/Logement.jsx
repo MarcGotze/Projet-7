@@ -50,7 +50,7 @@ const Logement = () => {
     } else {
       navigate("/notfound");
     }
-  }, [logements, params.id]);
+  }, [logements, params.id, navigate]);
 
   return (
     <div>
@@ -67,14 +67,14 @@ const Logement = () => {
 
           <div className="host">
             <p className="host__name">{host.name}</p>
-            <img className="host__picture" src={host.picture} alt="Photo de l'hôte" />
+            <img className="host__picture" src={host.picture} alt="Portrait de l'hôte" />
           </div>
         </div>
 
         <div className="logementWrapper">
           <div className="tagContainer">
-            {tags.map((tag) => (
-              <Tag tag={tag} />
+            {tags.map((tag, index) => (
+              <Tag key={index} tag={tag} />
             ))}
           </div>
           <div className="starsContainer">
@@ -83,8 +83,8 @@ const Logement = () => {
         </div>
         
         <div className="logementWrapper gap">
-              <Dropdown key="Description" title="Description" content={description} style="__small" />
-              <Dropdown key="Equipments" title="Equipements" array={equipments} style="__small" />
+              <Dropdown key="Description" title="Description" content={description} dropdownStyle="__small" />
+              <Dropdown key="Equipments" title="Equipements" array={equipments} dropdownStyle="__small" />
         </div>
 
       </div>
