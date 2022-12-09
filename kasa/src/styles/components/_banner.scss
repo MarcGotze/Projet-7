@@ -10,6 +10,7 @@
         line-height: 68px;
         bottom: 190px;
         left: 260px;
+        width: 800px;
     }
 
     &__img {
@@ -18,4 +19,27 @@
         width: 100%;
         filter : brightness(60%)
     }   
+    @include mobile {
+        justify-content: center;
+        align-items: center;
+        &__txt {
+            width: 217px;
+            height: 48px;
+            font-size: 24px;
+            left: 20px;
+            bottom: 112px;
+            line-height: 100%;
+            font-weight: 500;
+        }
+        &__img {
+            width: 100%;
+            height: 130px;
+        }
+    }
+}
+
+.bannerWrapper {
+    @include mobile {
+        
+    }
 }

@@ -5,13 +5,25 @@
     gap: 31px;
     margin-top: 30px;
     margin-bottom: 30px;
+    &__small {
+        @include mobile{
+            margin: 0;
+        }
+    }
 }
 .collapsible {
     width: 1023px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    @include mobile {
+        width: 370px;
+    }
     &__small {
         width: 582px;
         height: 52px;
+        @include mobile{
+            width: 370px;
+            height: auto;
+        }
     }
     &__content {
         padding: 10px 15px 10px 15px;
@@ -68,4 +80,9 @@
 
 .gap {
     gap: 45px;
+    @include mobile {
+       margin: 20px 0px 20px 0px;
+    }
 }
+
+

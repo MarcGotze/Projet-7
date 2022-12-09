@@ -4,7 +4,7 @@ import useCollapse from "react-collapsed";
 const Dropdown = ({ title, content, array, dropdownStyle }) => {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   return (
-    <div className="aboutBox">
+    <div className={`aboutBox${dropdownStyle}`}>
       <div className={`collapsible${dropdownStyle}`} >
         <div className={`collapsible__header${dropdownStyle}`} {...getToggleProps()}>
           {isExpanded ? title : title}

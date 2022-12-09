@@ -3,4 +3,12 @@
     justify-content: space-between;
     margin-bottom: 63px;
     padding-top: 30px;
+    @include mobile {
+        width: 45%;
+        margin-bottom: 16px;
+        .logo img {
+            width: 145px;
+            height: 47px;
+        }
+    }
 }

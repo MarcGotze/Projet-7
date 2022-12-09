@@ -1,5 +1,6 @@
 .footer {
     position: absolute;
+    width: 100%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -12,10 +13,17 @@
         margin-top: 66px;
         width: 122px;
         height: 39.44px;
+        @include mobile {
+            height: 40px;
+        }
     }
     &__copyrights {
         color: white;
         font-size: 24px;
         line-height: 34px;
+        @include mobile {
+            font-size: 12px;
+            font-weight: 500;
+        }
     }
 }

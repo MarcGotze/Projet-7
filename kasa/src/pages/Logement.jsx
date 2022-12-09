@@ -59,29 +59,32 @@ const Logement = () => {
         <div>
           <Gallery pictures={pictures}/>
         </div>
-        <div className="logementWrapper">
-          <div className="logementTitle">
-            <h2 className="item__title">{logement.title}</h2>
-            <p className="item__city">{logement.location}</p>
+
+        <div className="globalBlock">
+          <div className="logementBlock">
+            <div className="logementTitle">
+              <h2 className="item__title">{logement.title}</h2>
+              <p className="item__city">{logement.location}</p>
+            </div>
+
+            <div className="tagContainer">
+              {tags.map((tag, index) => (
+                <Tag key={index} tag={tag} />
+              ))}
+            </div>
           </div>
 
-          <div className="host">
-            <p className="host__name">{host.name}</p>
-            <img className="host__picture" src={host.picture} alt="Portrait de l'hôte" />
+          <div className="logementWrapper responsiveHost">
+            <div className="host">
+              <p className="host__name">{host.name}</p>
+              <img className="host__picture" src={host.picture} alt="Portrait de l'hôte" />
+            </div>
+            <div className="starsContainer">
+                <Rating rating={rating}/>
+            </div>
           </div>
         </div>
 
-        <div className="logementWrapper">
-          <div className="tagContainer">
-            {tags.map((tag, index) => (
-              <Tag key={index} tag={tag} />
-            ))}
-          </div>
-          <div className="starsContainer">
-              <Rating rating={rating}/>
-          </div>
-        </div>
-        
         <div className="logementWrapper gap">
               <Dropdown key="Description" title="Description" content={description} dropdownStyle="__small" />
               <Dropdown key="Equipments" title="Equipements" array={equipments} dropdownStyle="__small" />

@@ -34,6 +34,13 @@ body::-webkit-scrollbar {
     width: 1240px;
     margin-left: auto;
     margin-right: auto;
+    @include mobile {
+        max-width: 412px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 li {

@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       <div className="wrapper">
         <Header />
-        <div>
+        <div className="bannerWrapper">
           <Banner bannerContent={"./images/HOME_BANNER.png"} />
           <h3 className="banner__txt">Chez vous, partout et ailleurs</h3>
         </div>

@@ -2,6 +2,11 @@
     width: 1240px;
     height: 415px;
     margin: 0 auto;
+    border-radius: 10px;
+    @include mobile {
+        width: 375px;
+        height: 255px;
+    }
 }
 
 .arrow-box {
@@ -11,6 +16,11 @@
     height: 160px;
     display: flex;
     justify-content: space-between;
+    @include mobile {
+        width: 375px;
+        height: 255px;
+        top: 200px;
+    }
 }
 
 .left-arrow, .right-arrow {
@@ -18,6 +28,9 @@
     font-size: 10rem;
     cursor: pointer;
     user-select: none;
+    @include mobile {
+        font-size: 4rem;
+    }
 }
 
 .hidden-arrow {

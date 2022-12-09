@@ -2,13 +2,18 @@
     width: 100%;
     display: flex;
     gap: 10px;
-    padding-top: 10px;
+    @include mobile {
+        margin-top: -20px;
+    }
 }
 .tag {
     width: auto;
     height: 25px;
     border-radius: 10px;
     background: #FF6060;
+    @include mobile {
+        height: 18px;
+    }
     &__content {
         padding: 0px 10px 0px 10px;
         position: relative;
@@ -18,5 +23,9 @@
         color: white;
         text-align: center;
         cursor: default;
+        @include mobile {
+            font-size: 10px;
+            padding-top: 2px;
+        }
     }
 }

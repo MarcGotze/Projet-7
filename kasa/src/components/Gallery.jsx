@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
-const Carrousel = ({pictures}) => {
+const Gallery = ({pictures}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = pictures.length;
 
@@ -38,4 +38,4 @@ const Carrousel = ({pictures}) => {
   )
 };
 
-export default Carrousel;
+export default Gallery;
