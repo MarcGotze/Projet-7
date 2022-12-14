@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navigation = () => {
   return (
     <div className="nav">
-      <ul>
+      <ul className="nav__ul">
         <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
           <li className="nav__homeBtn">Accueil</li>
         </NavLink>
