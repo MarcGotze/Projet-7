@@ -1,39 +1,39 @@
+.bannerWrapper {
+    position: relative;
+    margin-bottom: 200px;
+    @include mobile {
+        margin-bottom: 130px;
+    }
+}
+
 .banner {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    @include mobile {
+        width: 100%;
+    }
     &__txt {
-        position: relative;
         color: white;
-        z-index: 1;
+        position: relative;
         font-size: 48px;
-        line-height: 68px;
-        bottom: 190px;
-        left: 260px;
-        width: 800px;
+        font-weight: 500;
+        text-align: center;
+        @include mobile {
+            font-size: 24px;
+            text-align: start;
+            padding-left: 10px;
+            width: 80%;
+        }
     }
 
     &__img {
-        position: relative;
         border-radius: 25px;
         width: 100%;
-        filter : brightness(60%)
-    }   
-    @include mobile {
-        justify-content: center;
-        align-items: center;
-        &__txt {
-            width: 217px;
-            height: 48px;
-            font-size: 24px;
-            left: 20px;
-            bottom: 112px;
-            line-height: 100%;
-            font-weight: 500;
-        }
-        &__img {
-            width: 100%;
+        filter : brightness(60%);
+        @include mobile {
             height: 130px;
         }
-    }
+    }   
 }

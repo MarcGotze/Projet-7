@@ -1,11 +1,13 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 63px;
+    margin-bottom: 120px;
     padding-top: 30px;
+    margin-left: 65px;
+    margin-right: 65px;
     @include mobile {
-        width: 45%;
-        margin-bottom: 16px;
+        margin: 0;
+        margin-bottom: 50px;
         .logo img {
             width: 30vw;
             height: 47px;
