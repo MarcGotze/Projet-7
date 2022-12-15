@@ -8,17 +8,17 @@ const Notfound = () => {
     <>
       <div className="wrapper">
         <Header />
-        <div className="error">
-          <h1 className="error__404">404</h1>
-          <h3 className="error__txt">
-            Oups! La page que vous demandez n'existe pas.
-          </h3>
-          <NavLink to="/">
-            <p className="error__return">Retourner sur la page d'accueil</p>
-          </NavLink>
-        </div>
+          <div className="error">
+            <h1 className="error__404">404</h1>
+            <h3 className="error__txt">
+              Oups! La page que vous demandez n'existe pas.
+            </h3>
+            <NavLink to="/">
+              <p className="error__return">Retourner sur la page d'accueil</p>
+            </NavLink>
+          </div>
+        </div> 
         <Footer />
-      </div>  
     </>
   );
 };

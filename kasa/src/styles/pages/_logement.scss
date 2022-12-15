@@ -5,13 +5,22 @@
         flex-direction: column;
     }
 }
-
+.gap {
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
 .globalBlock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
     @include mobile {
+        flex-direction: column;
+    }
+    @include tablet {
         flex-direction: column;
     }
 }
@@ -24,6 +33,9 @@
 
 .logementTitle {
     height: 110px;
+    @include tablet {
+        margin-left: 10px;
+    }
 }
 
 .item__title {
@@ -36,6 +48,9 @@
     @include mobile {
         font-size: 20px;
     }
+    @include tablet {
+        font-size: 20px;
+    }
 }
 
 .item__city {
@@ -45,6 +60,9 @@
     @include mobile {
         margin-top: 33px;
     }
+    @include tablet {
+        margin-top: 33px;
+    }    
 }
 
 .host {
@@ -56,6 +74,11 @@
         align-items: flex-start;
         margin: 0;
     }
+    @include tablet {
+        align-items: flex-start;
+        margin: 0;
+        margin-right: 10px;
+    } 
     &__picture {
         width: 64px;
         height: 64px;
@@ -69,6 +92,10 @@
            text-align: end;
            margin-top: 10px;
         }
+        @include tablet {
+            text-align: end;
+            margin-top: 10px;
+        } 
     }
 }
 
@@ -81,6 +108,10 @@
         padding: 0;
         margin-top: 15px;
     }
+    @include mobile {
+        padding: 0;
+        margin-top: 15px;
+     }
 }
 
 .star {
@@ -89,6 +120,10 @@
         width: 20px;
         height: 20px;
     }
+    @include mobile {
+        width: 20px;
+        height: 20px;
+     }
 }
 
 .marginTop {
@@ -100,6 +135,13 @@
     flex-direction: column;
     align-items: flex-end;
     @include mobile {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        height: 100px;
+        margin-bottom: -30px;
+    }
+    @include tablet {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;

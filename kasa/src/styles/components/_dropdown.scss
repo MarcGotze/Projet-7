@@ -12,16 +12,21 @@
     }
 }
 .collapsible {
-    width: 1023px;
+    max-width: 1023px;
+    width: 70vw;
     margin: 0 auto; 
     @include mobile {
         width: 100%;
     }
     &__small {
-        width: 582px;
+        width: 512px;
         height: 52px;
         @include mobile{
             width: 100%;
+            height: auto;
+        }
+        @include tablet {
+            width: 98vw;
             height: auto;
         }
     }

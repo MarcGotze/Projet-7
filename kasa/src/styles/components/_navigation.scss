@@ -1,34 +1,31 @@
-
-.nav {  
-  width: 51vw;
-  &__ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; 
-    margin-top: 30px;
-    gap: 57px;
-    @include mobile {
-      gap: 30px;
-      margin-top: 20px;
+.nav {
+    &__ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        gap: 50px;
+        @include mobile {
+            gap: 0;
+        }
+        a {
+            padding-bottom: 5px;
+            @include mobile {
+                width: 90px;
+            }
+        }
+        li {
+            font-size: 24px;
+            padding-top: 20px;
+            @include mobile {
+                font-size: 14px;
+                padding-top: 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
     }
-  }
-
-  li {
-    font-size: 24px;
-    font-weight: 500;
-    @include mobile {
-      font-size: 12px;
-      text-transform: uppercase;
-      padding-bottom: 5px;
-    }
-  }
-
-  &__aboutBtn {
-    width: 110px; 
-    @include mobile {
-      width: 70px;
-    }
-  }
 }
 
 .nav-active {
