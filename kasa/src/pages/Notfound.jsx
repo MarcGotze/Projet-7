@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Notfound = () => {
   return (
-    <div>
+    <>
       <div className="wrapper">
         <Header />
         <div className="error">
@@ -19,7 +19,7 @@ const Notfound = () => {
         </div>
         <Footer />
       </div>  
-    </div>
+    </>
   );
 };
 

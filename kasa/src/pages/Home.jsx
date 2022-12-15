@@ -12,12 +12,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="wrapper">
         <Header />
         <div className="bannerWrapper">
-          <Banner bannerContent={"./images/HOME_BANNER.png"} />
-          <h3 className="banner__txt">Chez vous, partout et ailleurs</h3>
+          <Banner bannerContent={"./images/HOME_BANNER.png"} bannerTitle={"Chez vous, partout et ailleurs"}/>
         </div>
         <section className="card__box">
           {data.map((card) => (
@@ -26,7 +25,7 @@ const Home = () => {
         </section>
       </div>
         <Footer />
-    </div>
+    </>
   );
 };
 

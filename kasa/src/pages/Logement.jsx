@@ -53,7 +53,7 @@ const Logement = () => {
   }, [logements, params.id, navigate]);
 
   return (
-    <div>
+    <>
       <div className="wrapper item">
         <Header />
         <div>
@@ -92,7 +92,7 @@ const Logement = () => {
 
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

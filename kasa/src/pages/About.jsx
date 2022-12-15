@@ -24,7 +24,7 @@ const About = () => {
     },
   ];
   return (
-    <div>
+    <>
       <div className="wrapper">
         <Header />
         <Banner bannerContent={"./images/ABOUT_BANNER.png"} />
@@ -33,7 +33,7 @@ const About = () => {
         ))}
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
