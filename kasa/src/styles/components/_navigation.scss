@@ -7,6 +7,7 @@
         align-content: center;
         gap: 50px;
         @include mobile {
+          padding-top: 4px;
             gap: 0;
         }
         a {
@@ -25,6 +26,17 @@
                 text-transform: uppercase;
             }
         }
+    }
+    &__homeBtn {
+      @include mobile {
+        padding-right: 10px;
+      }
+    }  
+    &__aboutBtn {
+      @include mobile {
+        padding-right: 10px;
+        width: 100px;
+      }
     }
 }
 
