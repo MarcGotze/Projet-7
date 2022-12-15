@@ -3,14 +3,10 @@
     justify-content: space-between;
     margin-bottom: 40px;
     padding-top: 30px;
-    margin-left: 65px;
     margin-right: 65px;
+    width: 100%;
     @include mobile {
         margin: 0;
         margin-bottom: 10px;
-        .logo img {
-            // width: 30vw;
-            // height: 47px;
-        }
     }
 }
