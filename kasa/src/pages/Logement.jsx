@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import Tag from "../components/Tag";
@@ -23,9 +22,9 @@ const Logement = () => {
 
   //Récupération des données du json via un axios.get
   useEffect(() => {
-    axios.get("../logements.json").then((res) => {
-      setLogements(res.data);
-    });
+    fetch("../logements.json")
+    .then(res => res.json())
+    .then(body => setLogements(body));
   }, []);
 
   //Settings des données dans les states et gestion des erreurs

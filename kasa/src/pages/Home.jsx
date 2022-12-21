@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
@@ -8,7 +7,9 @@ import Footer from "../components/Footer";
 const Home = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("logements.json").then((res) => setData(res.data));
+    fetch("logements.json")
+      .then(res => res.json())
+      .then(body => setData(body));
   }, []);
 
   return (
