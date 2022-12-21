@@ -20,7 +20,7 @@
     }
     &__small {
         width: 512px;
-        height: 52px;
+        height: auto;
         @include mobile{
             width: 100%;
             height: auto;
